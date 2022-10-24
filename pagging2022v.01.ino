@@ -62,13 +62,13 @@ void loop() {
 
   int red = HIGH;
   int green = LOW;
-  if (request.indexOf("/LED=OFF") != -1)  {
+  if (request.indexOf("/LED=ON") != -1)  {
     digitalWrite(ledPin, HIGH);
     red = HIGH;
     digitalWrite(ledPin2, LOW);
     green = LOW;
   }
-  if (request.indexOf("/LED=ON") != -1)  {
+  if (request.indexOf("/LED=OFF") != -1)  {
     digitalWrite(ledPin, LOW);
     red = LOW;
     digitalWrite(ledPin2, HIGH);
@@ -99,8 +99,8 @@ void loop() {
       client.print("<h2 style='color:green;'> READY <h2>");}  
   
   client.println("<br><br>");
-  client.println("<a href=\"/LED=ON\"\"><button>  READY </button></a>");
-  client.println("<a href=\"/LED=OFF\"\"><button> NOT READY </button></a>");
+  client.println("<a href=\"/LED=OFF\"\"><button>  READY </button></a>");
+  client.println("<a href=\"/LED=ON\"\"><button> NOT READY </button></a>");
  // client.println("<a href=\"/LED=OFF\"\"><button>Off </button></a><br />");
  
   
