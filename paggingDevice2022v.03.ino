@@ -87,16 +87,17 @@ void loop(){
               Serial.println("GPIO 26 on");
               output26State = "on";
               // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
-              for (int i = 255; i < 2; i--) {
-              for (int j = 255; j < 2; j--) {
-              for (int k = 255; k < 2; k--) {
+//              for (int i = 255; i < 2; i--) {
+//              for (int j = 255; j < 2; j--) {
+//              for (int k = 255; k < 2; k--) {
                
-              pixels.setPixelColor(0, pixels.Color(i  , j , k )); // Moderately bright green color.
-              pixels.show(); // This sends the updated pixel color to the hardware.
-              delay(200); // Delay for a period of time (in milliseconds).
-                       }
-                    }
-                  }
+//              pixels.setPixelColor(0, pixels.Color(i  , j , k )); // Moderately bright green color.
+                pixels.setPixelColor(0, pixels.Color(0,0,0)); // 
+                pixels.show(); // This sends the updated pixel color to the hardware.
+//             delay(200); // Delay for a period of time (in milliseconds).
+//                       }
+//                    }
+//                  }
               digitalWrite(output26, HIGH);
               Serial.println("GPIO 27 off");
               output27State = "off";
@@ -110,16 +111,17 @@ void loop(){
               Serial.println("GPIO 27 on");
               output27State = "on";
               // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
-              for (int i = 0; i < 2; i++) {
-              for (int j = 0; j < 2; j++) {
-              for (int k = 0; k < 2; k++) {
+//              for (int i = 0; i < 2; i++) {
+//              for (int j = 0; j < 2; j++) {
+//              for (int k = 0; k < 2; k++) {
                
-              pixels.setPixelColor(0, pixels.Color(i * 255, j * 255, k * 255)); // Moderately bright green color.
+          //    pixels.setPixelColor(0, pixels.Color(i * 255, j * 255, k * 255)); // Moderately bright green color.
+                   pixels.setPixelColor(0, pixels.Color(255,0,0)); // Moderately bright green color.
               pixels.show(); // This sends the updated pixel color to the hardware.
-              delay(200); // Delay for a period of time (in milliseconds).
-                       }
-                    }
-                  }
+//              delay(200); // Delay for a period of time (in milliseconds).
+//                       }
+//                    }
+//                  }
                digitalWrite(output27, HIGH);
               
               int i = 0;
